@@ -7,8 +7,8 @@
     </template>
 
     <v-list>
-      <v-list-item v-for="(item, index) in link.subs" :key="index" @click="" class="nav-menu-option">
-        <v-list-item-title>{{ item.title }}</v-list-item-title>
+      <v-list-item v-for="(item, index) in link.subs" :key="index" @click="" class="list-item-container">
+        <v-list-item-title class="list-item">{{ item.title }}</v-list-item-title>
       </v-list-item>
     </v-list>
   </v-menu>
@@ -30,8 +30,6 @@
     height: 100%;
     justify-content: center;
     text-transform: uppercase;
-    padding-left: 1%;
-    padding-right: 1%;
   }
 
   .nav-button a {
@@ -44,7 +42,19 @@
     color: orange;
   }
 
-  .v-list-item--link:hover {
+  .list-item-container {
+    background-color: white !important;
+  }
+
+  .list-item-container:hover {
+    background-color: white !important;
+    opacity: 1;
+  }
+  .list-item {
+    color: black;
+  }
+
+  .list-item:hover {
     background-color: white;
     color: orange;
   }
